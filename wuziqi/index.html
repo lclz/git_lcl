@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<bgsound id="bg" src="../gb/gsls.mp3">
+		<script type="text/javascript" src="js/WZQ.js"></script>
+		
+		<style type="text/css">
+			body{background-image: url(img/o20jqu-xzf.jpg);margin: 0;}
+			#Canvas_div{cursor: pointer;background: rgba(0,0,0,0.1);}
+			#myMusic{position: absolute;top: 3px;left: 0px; }
+			#myAudio{float: right; border: 1px solid #fff;border-radius: 5px; display: block;background: #000;}
+			#myButton{float: left;width: 30px;height: 32px;background:lightgray;font-size: 28px;font-family: "宋体";line-height: 32px;text-align: center;cursor: pointer;border: 1px solid lightgray;border-radius: 5px;}
+			
+			#myVolume{width: 300px;50px;position: absolute;top:10px;left: 335px;}
+			#jia,#jian{background: cyan;border-radius: 5px;}
+			
+			#lichanglong{position: fixed;top: 20px;right: 100px;font-size: 18px;font-family: "楷体";}
+		</style>
+		
+		
+	</head>
+	<body onmousedown="Lazi(event)" onkeydown="KeyDown(event)">
+		
+	<div id="Canvas_div" style="width: 800px;height: 800px;margin: 0 auto;">
+		<canvas id="Canvas" width="800" height="800"></canvas>
+		
+		<div id="myVolume">
+			<button id="jia" onclick="setFullVolume()" type="button">音量-</button>
+			<button id="jian" onclick="setHalfVolume()" type="button">音量+</button>
+			
+		</div>
+		
+	</div>
+		
+		
+	<!--music-->	
+	<div id="myMusic">		
+	
+		<div id="myButton" onclick="myMusic()" onmouseover="over()" onmouseout="out()">
+			>>
+		</div>
+		
+		<audio controls="controls" autoplay="autoplay" loop="loop" id="myAudio">
+			<!--<source src="bg/shqn.mp3" type="audio/ogg">
+		  	<source src="bg/shqn.mp3" type="audio/mpeg">-->
+		  	<source src="bg/gsls.mp3" type="audio/ogg">
+		  		您的浏览器不支持 audio 标签。
+		  	<source src="bg/gsls.mp3" type="audio/mpeg">
+		</audio>
+		
+	</div>	
+	
+	
+	
+	
+	<div id="lichanglong">
+		——李长龙
+	</div>
+	
+	</body>
+</html>
